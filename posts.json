@@ -2,12 +2,12 @@
     {
         "slug": "markdown-latex",
         "title": "everything this blog can render",
-        "date": "2026-02-20",
+        "date": "2026-09-11",
         "excerpt": "testing headers, code blocks, tables, quotes, and LaTeX math",
         "tags": [
             "markdown",
             "latex",
-            "meta"
+            "programming"
         ]
     }
 ]

@@ -462,6 +462,5 @@ nav.site-nav a:hover {
 }
 
 ::selection {
-    background: var(--accent-pink);
-    color: var(--text);
+    background: rgba(255, 182, 193, 0.45);
 }

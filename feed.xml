@@ -8,9 +8,9 @@
 
     <item>
       <title>everything this blog can render</title>
-      <link>https://blog.example.com/post.html?slug=markdown-and-latex</link>
-      <guid>https://blog.example.com/post.html?slug=markdown-and-latex</guid>
-      <pubDate>Fri, 20 Feb 2026 00:00:00 GMT</pubDate>
+      <link>https://blog.transgirls.love/post.html?slug=markdown-latex</link>
+      <guid>https://blog.transgirls.love/post.html?slug=markdown-latex</guid>
+      <pubDate>Fri, 11 Sep 2026 14:10:00 UTC-7</pubDate>
       <description>testing headers, code blocks, tables, quotes, and LaTeX math</description>
     </item>
   </channel>
