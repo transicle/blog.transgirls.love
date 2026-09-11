@@ -42,7 +42,7 @@ async function loadManifest() {
 }
 
 async function loadPostRaw(slug) {
-    const url = `${POSTS_DIR}${slug}.md`;
+    const url = `${POSTS_DIR}${slug}.txt`;
     const res = await fetch(url);
 
     if (!res.ok) {
