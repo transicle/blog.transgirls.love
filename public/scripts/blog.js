@@ -47,7 +47,7 @@ async function loadPostRaw(slug) {
 
     if (!res.ok) {
         throw new Error(
-            `couldn't load post "${slug}" (${res.status} ${res.statusText}) from ${url}`
+            `couldn't load post "${slug}" (${res.status}) from ${url}`
         );
     }
 
@@ -55,17 +55,40 @@ async function loadPostRaw(slug) {
 }
 
 function renderMarkdownWithMath(markdownBody, targetEl) {
-    targetEl.innerHTML = marked.parse(markdownBody, {
+    const mathBlocks = [];
+
+    const protectedMarkdown = markdownBody.replace(
+        /\$\$[\s\S]*?\$\$/g,
+        (block) => {
+            const index = mathBlocks.length;
+
+            mathBlocks.push(block.replace(/\\\\/g, "\uE000"));
+
+            return `\uE001MATHBLOCK${index}\uE001`;
+        }
+    );
+
+    targetEl.innerHTML = marked.parse(protectedMarkdown, {
         breaks: false,
         gfm: true,
     });
 
-    // syntax highlighting
+    targetEl.innerHTML = targetEl.innerHTML.replace(
+        /\uE001MATHBLOCK(\d+)\uE001/g,
+        (_, index) => mathBlocks[index]
+    );
+
     targetEl.querySelectorAll("pre code").forEach((block) => {
-        if (window.hljs) window.hljs.highlightElement(block);
+        if (window.hljs) {
+            window.hljs.highlightElement(block);
+        }
     });
 
-    // LaTeX via KaTeX auto-render
+    targetEl.innerHTML = targetEl.innerHTML.replace(
+        /\uE000/g,
+        "\\\\"
+    );
+
     if (window.renderMathInElement) {
         window.renderMathInElement(targetEl, {
             delimiters: [
@@ -97,7 +120,7 @@ async function renderPostList(targetSelector) {
     try {
         const posts = await loadManifest();
         if (!posts.length) {
-            el.innerHTML = `<p class="state-msg">no posts yet — check back soon :3</p>`;
+            el.innerHTML = `<p class="state-msg">no posts yet!! come back soon :3</p>`;
             return;
         }
         el.innerHTML = posts
@@ -142,7 +165,7 @@ async function renderSinglePost() {
         const date = meta.date || listing.date || "";
         const tags = meta.tags || listing.tags || [];
 
-        if (titleTag) titleTag.textContent = `${title} — blog`;
+        if (titleTag) titleTag.textContent = title;
 
         headerEl.innerHTML = `
       <div class="post-date">${formatDate(date)}</div>

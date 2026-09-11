@@ -54,8 +54,7 @@ stickers.forEach((s) => console.log(`loaded ${s}`));
 ## LaTeX
 
 inline math works like this: the quadratic formula is
-$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$, which everyone half-remembers from
-school.
+$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
 
 block-level math gets its own centered line:
 
@@ -71,6 +70,3 @@ $$
 =
 \begin{pmatrix} ax + by \\ cx + dy \end{pmatrix}
 $$
-
-that's the full toolkit. everything above is just markdown + a couple of
-delimiters — no special plugins needed per-post.
