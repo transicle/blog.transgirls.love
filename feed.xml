@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>my blog</title>
+    <link>https://blog.transgirls.love</link>
+    <description>bleehghh :3</description>
+    <language>en-us</language>
+
+    <item>
+      <title>everything this blog can render</title>
+      <link>https://blog.example.com/post.html?slug=markdown-and-latex</link>
+      <guid>https://blog.example.com/post.html?slug=markdown-and-latex</guid>
+      <pubDate>Fri, 20 Feb 2026 00:00:00 GMT</pubDate>
+      <description>a kitchen-sink post testing headers, code blocks, tables, quotes, and LaTeX math.</description>
+    </item>
+  </channel>
+</rss>

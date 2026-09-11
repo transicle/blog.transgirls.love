@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>post — my blog</title>
+    <meta name="theme-color" content="#eaeaea" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="public/styles.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💌</text></svg>" />
+</head>
+
+<body>
+    <div class="page-layout">
+
+        <aside class="sticker-side">
+            <div class="site-id">
+                <img class="avatar"
+                    src="https://raw.githubusercontent.com/transicle/transgirls.love/main/assets/favicons/trans.png"
+                    alt="site avatar" />
+                <h1>my blog\</h1>
+                <p class="tagline">bleehghh >^< </p>
+            </div>
+
+            <nav class="social-links" aria-label="Social links">
+                <a class="social-link" href="https://github.com/transicle" target="_blank" rel="noreferrer"
+                    aria-label="GitHub">
+                    <img src="https://raw.githubusercontent.com/transicle/transgirls.love/main/assets/favicons/github.png"
+                        alt="GitHub" />
+                </a>
+                <a class="social-link" href="https://x.com/transicle" target="_blank" rel="noreferrer" aria-label="X">
+                    <img src="https://raw.githubusercontent.com/transicle/transgirls.love/main/assets/favicons/x.png"
+                        alt="X" />
+                </a>
+                <a class="social-link" href="https://discord.com/users/1002377371892072498" target="_blank"
+                    rel="noreferrer" aria-label="Discord">
+                    <img src="https://raw.githubusercontent.com/transicle/transgirls.love/main/assets/favicons/discord.png"
+                        alt="Discord" />
+                </a>
+            </nav>
+
+            <nav class="site-nav" aria-label="Site navigation">
+                <ul>
+                    <li><a href="index.html">all posts</a></li>
+                    <li><a href="https://transgirls.love">main site</a></li>
+                    <li><a href="feed.xml">rss feed</a></li>
+                </ul>
+            </nav>
+
+            <div class="stickers" id="sticker-container" aria-label="Sticker grid"></div>
+
+            <div class="buttons-88x31" aria-label="88x31 buttons">
+                <a href="https://github.com/transicle/88x31" target="_blank" rel="noreferrer">
+                    <img src="https://raw.githubusercontent.com/transicle/88x31/main/assets/007button.gif"
+                        alt="88x31 button" loading="lazy" />
+                </a>
+                <a href="https://neocities.org" target="_blank" rel="noreferrer">
+                    <img src="https://raw.githubusercontent.com/transicle/88x31/main/assets/000_20Y2K_20NEOCITIES_20BUTTON_2001.png"
+                        alt="Y2K Neocities button" loading="lazy" />
+                </a>
+            </div>
+        </aside>
+
+        <main class="content-side">
+            <a href="index.html" style="font-size:0.85rem;">&larr; back to all posts</a>
+
+            <article>
+                <header class="post-header">
+                    <p class="state-msg">loading…</p>
+                </header>
+                <div class="post-body"></div>
+                <footer class="post-footer"></footer>
+            </article>
+        </main>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.1/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+    <script src="public/scripts/blog.js"></script>
+    <script>
+        const STICKER_FILES = [
+            "hello-kitty.gif",
+            "piracy-now.gif",
+            "nyan-cat.gif",
+            "gay.gif",
+            "no-webp.gif",
+            "princess.gif",
+        ];
+        loadStickers(
+            "sticker-container",
+            STICKER_FILES,
+            "https://raw.githubusercontent.com/transicle/transgirls.love/main/assets/stickers/"
+        );
+
+        renderSinglePost();
+    </script>
+</body>
+
+</html>

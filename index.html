@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>$ echo "my blog ♥︎"</title>
+    <meta name="description" content="a small hand-built blog, no backend required." />
+    <meta name="theme-color" content="#eaeaea" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="public/styles.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+    <link rel="icon"
+        href="https://raw.githubusercontent.com/transicle/transgirls.love/main/assets/favicons/trans.png" />
+</head>
+
+<body>
+    <div class="page-layout">
+
+        <aside class="sticker-side">
+            <div class="site-id">
+                <img class="avatar" src="https://avatars.githubusercontent.com/u/173532449?v=4" alt="site avatar" />
+                <h1>my blog\</h1>
+                <p class="tagline">bleehghh :3</p>
+            </div>
+
+            <nav class="site-nav" aria-label="Site navigation">
+                <ul>
+                    <!-- <li><a href="index.html">all posts</a></li> -->
+                    <li><a href="https://transgirls.love">main site</a></li>
+                    <li><a href="feed.xml">rss feed</a></li>
+                </ul>
+            </nav>
+
+            <div class="stickers" id="sticker-container" aria-label="Sticker grid"></div>
+
+            <div class="buttons-88x31" aria-label="88x31 buttons">
+                <a href="https://github.com/transicle/88x31" target="_blank" rel="noreferrer">
+                    <img src="https://raw.githubusercontent.com/transicle/88x31/main/assets/007button.gif"
+                        alt="88x31 button" loading="lazy" />
+                </a>
+                <a href="https://neocities.org" target="_blank" rel="noreferrer">
+                    <img src="https://raw.githubusercontent.com/transicle/88x31/main/assets/000_20Y2K_20NEOCITIES_20BUTTON_2001.png"
+                        alt="Y2K Neocities button" loading="lazy" />
+                </a>
+            </div>
+        </aside>
+
+        <main class="content-side">
+            <h1 class="content-title">all posts</h1>
+            <p class="content-subtitle">i really just write about whatever i find interesting!! right now i enjoy and
+                want to write about philosophy, compilers, and possibly neuroscience..</p>
+
+            <div class="post-list">
+                <p class="state-msg">loading posts…</p>
+            </div>
+
+            <footer class="site-footer">
+                <p>i love you · <a href="https://github.com/transicle/transgirls.love" target="_blank"
+                        rel="noreferrer">transgirls.love</a></p>
+            </footer>
+        </main>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.1/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+    <script src="public/scripts/blog.js"></script>
+    <script>
+        const STICKER_FILES = [
+            "trans-your-gender.gif",
+            "written-using-vi.gif",
+            "trans-rights-now.gif",
+            "candy-shop.gif",
+            "ublock-origin-now.gif",
+            "cute-anime.gif",
+        ];
+        loadStickers(
+            "sticker-container",
+            STICKER_FILES,
+            "https://raw.githubusercontent.com/transicle/transgirls.love/main/assets/stickers/"
+        );
+
+        renderPostList(".post-list");
+    </script>
+</body>
+
+</html>
