@@ -142,7 +142,7 @@ img {
     background: var(--bg-alt);
     border: 1px solid var(--border);
     text-decoration: none;
-    transition: transform 0.15s ease, background 0.15s ease;
+    /* transition: transform 0.15s ease, background 0.15s ease; */
 }
 
 .social-link:hover {

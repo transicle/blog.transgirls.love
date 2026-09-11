@@ -42,8 +42,15 @@ async function loadManifest() {
 }
 
 async function loadPostRaw(slug) {
-    const res = await fetch(`${POSTS_DIR}${slug}.md`);
-    if (!res.ok) throw new Error(`couldn't load post "${slug}"`);
+    const url = `${POSTS_DIR}${slug}.md`;
+    const res = await fetch(url);
+
+    if (!res.ok) {
+        throw new Error(
+            `couldn't load post "${slug}" (${res.status} ${res.statusText}) from ${url}`
+        );
+    }
+
     return res.text();
 }
 
