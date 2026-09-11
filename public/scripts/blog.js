@@ -1,5 +1,5 @@
-const POSTS_MANIFEST = "posts.json";
-const POSTS_DIR = "posts/";
+const POSTS_MANIFEST = "/posts.json";
+const POSTS_DIR = "/posts/";
 
 function parseFrontmatter(raw) {
     const match = raw.match(/^---\s*\n([\s\S]*?)\n---\s*\n?([\s\S]*)$/);

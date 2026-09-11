@@ -260,7 +260,7 @@ nav.site-nav a:hover {
     border-radius: var(--radius);
     padding: 1.1rem 1.3rem;
     box-shadow: var(--shadow);
-    transition: transform 0.12s ease, border-left-color 0.12s ease;
+    /* transition: transform 0.12s ease, border-left-color 0.12s ease; */
 }
 
 .post-card:hover {

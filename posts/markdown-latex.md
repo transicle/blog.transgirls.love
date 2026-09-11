@@ -1,8 +1,8 @@
 ---
-title: everything this blog can render
+title: everything this blog page can render!
 date: 2026-02-20
 tags: markdown, latex, meta
-excerpt: a kitchen-sink post testing headers, code blocks, tables, quotes, and LaTeX math.
+excerpt: a post testing headers, code blocks, tables, quotes, and LaTeX math!
 ---
 
 this post exists purely to test the renderer. if something looks broken here,
