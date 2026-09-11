@@ -3,7 +3,7 @@
         "slug": "markdown-latex",
         "title": "everything this blog can render",
         "date": "2026-02-20",
-        "excerpt": "a kitchen-sink post testing headers, code blocks, tables, quotes, and LaTeX math.",
+        "excerpt": "testing headers, code blocks, tables, quotes, and LaTeX math",
         "tags": [
             "markdown",
             "latex",

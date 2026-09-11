@@ -1,7 +1,7 @@
 ---
 title: everything this blog page can render!
 date: 2026-02-20
-tags: markdown, latex, meta
+tags: markdown, latex, programming
 excerpt: a post testing headers, code blocks, tables, quotes, and LaTeX math!
 ---
 

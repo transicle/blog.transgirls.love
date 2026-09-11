@@ -23,7 +23,7 @@
     --font-mono: "Source Code Pro", ui-monospace, "SF Mono", Consolas, monospace;
 
     --radius: 10px;
-    --shadow: 0 1px 0 var(--border), 0 6px 14px -8px rgba(124, 32, 58, 0.25);
+    /* --shadow: 0 1px 0 var(--border), 0 6px 14px -8px rgba(124, 32, 58, 0.25); */
 }
 
 * {
@@ -89,7 +89,7 @@ img {
     border: 2px dashed var(--border);
     border-radius: var(--radius);
     padding: 1.25rem;
-    box-shadow: var(--shadow);
+    /* box-shadow: var(--shadow); */
 }
 
 @media (max-width: 800px) {
@@ -146,7 +146,7 @@ img {
 }
 
 .social-link:hover {
-    transform: translateY(-2px) rotate(-4deg);
+    /* transform: translateY(-2px) rotate(-4deg); */
     background: var(--accent-pink);
 }
 
@@ -256,16 +256,16 @@ nav.site-nav a:hover {
 .post-card {
     background: var(--bg-inset);
     border: 1px solid var(--border);
-    border-left: 5px solid var(--accent-blue);
+    /* border-left: 5px solid var(--accent-blue); */
     border-radius: var(--radius);
     padding: 1.1rem 1.3rem;
-    box-shadow: var(--shadow);
+    /* box-shadow: var(--shadow); */
     /* transition: transform 0.12s ease, border-left-color 0.12s ease; */
 }
 
 .post-card:hover {
-    transform: translateX(3px);
-    border-left-color: var(--accent-pink);
+    /* transform: translateX(3px); */
+    /* border-left-color: var(--accent-pink); */
 }
 
 .post-card .post-date {
@@ -333,7 +333,7 @@ nav.site-nav a:hover {
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 2rem;
-    box-shadow: var(--shadow);
+    /* box-shadow: var(--shadow); */
 }
 
 .post-body h1,
