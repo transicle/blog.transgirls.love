@@ -9,5 +9,16 @@
             "latex",
             "programming"
         ]
+    },
+    {
+        "slug": "somrence",
+        "title": "somrence and the feeling behind it",
+        "date": "2026-09-14",
+        "excerpt": "somrence is a word i created to describe the sensation i feel towards some letters",
+        "tags": [
+            "linguistics",
+            "feeling",
+            "emotion"
+        ]
     }
 ]
